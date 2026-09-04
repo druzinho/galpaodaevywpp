@@ -244,6 +244,60 @@ src="https://www.facebook.com/tr?id=1085437827348953&ev=PageView&noscript=1"
     font-size: 15px;
   }
 
+  .product-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 10px 14px 10px 10px;
+    margin-top: -6px;
+    transition: background 0.15s ease;
+  }
+
+  .product-card:hover {
+    background: rgba(255,255,255,0.05);
+  }
+
+  .product-card img {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: var(--white);
+    flex-shrink: 0;
+  }
+
+  .product-card-text {
+    flex: 1;
+    text-align: left;
+    min-width: 0;
+  }
+
+  .product-card-tag {
+    font-size: 11px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .product-card-name {
+    font-size: 13px;
+    color: var(--white);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .product-card iconify-icon {
+    color: var(--gray);
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
   .info-box {
     width: 100%;
     background: var(--bg2);
@@ -355,6 +409,7 @@ src="https://www.facebook.com/tr?id=1085437827348953&ev=PageView&noscript=1"
 document.addEventListener('DOMContentLoaded', function () {
   var groupLink = 'https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3';
   var channelLink = 'https://whatsapp.com/channel/0029Vb8rcXqEQIahhY1zw32d';
+  var productLink = 'https://meli.la/1kE2wQu';
 
   document.querySelectorAll('a[href]').forEach(function (link) {
     if (link.href.indexOf(groupLink) !== -1) {
@@ -365,6 +420,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (link.href.indexOf(channelLink) !== -1) {
       link.addEventListener('click', function () {
         fbq('trackCustom', 'click_whatsapp_channel');
+      });
+    }
+    if (link.href.indexOf(productLink) !== -1) {
+      link.addEventListener('click', function () {
+        fbq('trackCustom', 'click_product');
       });
     }
   });
@@ -385,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
     <p class="proof-note">+5 mil pessoas já fizeram parte</p>
 
-    <h1>Seu atalho para pagar menos todos os dias</h1>
+    <h1>Quem tá no Galpão, paga menos.</h1>
     <p class="subhead">Cupom e oferta do Mercado Livre, todo dia, direto no seu WhatsApp.</p>
 
     <a href="https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3" data-track="click_whatsapp_group" target="_blank" rel="noopener noreferrer" class="cta-btn">
@@ -399,6 +459,15 @@ document.addEventListener('DOMContentLoaded', function () {
       <span><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> Saia quando quiser</span>
     </div>
 
+    <a href="https://meli.la/1kE2wQu" data-track="click_product" target="_blank" rel="noopener noreferrer" class="product-card">
+      <img src="assets/images/products/bebedouro-britania.png" alt="Bebedouro Bbe12p Aquaplus Para 10l Ou 20l Britânia Cor Preto">
+      <span class="product-card-text">
+        <span class="product-card-tag">Oferta de hoje no grupo</span>
+        <span class="product-card-name">Bebedouro Bbe12p Aquaplus Para 10l Ou 20l Britânia Cor Preto</span>
+      </span>
+      <iconify-icon icon="lucide:chevron-right" aria-hidden="true"></iconify-icon>
+    </a>
+
     <div class="info-box">
       <h2>Você também adora economizar?</h2>
       <p>Garimpamos os melhores cupons e ofertas do Mercado Livre e compartilhamos com você, todos os dias.</p>
@@ -407,7 +476,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="divider-row">Parceiros de oferta</div>
 
     <div class="partners-row" aria-label="Lojas parceiras">
-      <span class="partner-icon Mercado Livre" title="Mercado Livre"><img src="assets/images/partners/mercado-livre.png" ></span>
+      <span class="partner-icon ml" title="Mercado Livre"><img src="assets/images/partners/mercado-livre.png" alt="Mercado Livre"></span>
       <span class="partner-icon shopee" title="Shopee"><iconify-icon icon="simple-icons:shopee" aria-hidden="true"></iconify-icon></span>
       <span class="partner-icon amazon" title="Amazon"><iconify-icon icon="simple-icons:amazon" aria-hidden="true"></iconify-icon></span>
     </div>
