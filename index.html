@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Galpão da Evy | Quem tá no Galpão, paga menos</title>
+<meta name="description" content="Entre grátis no grupo do Galpão da Evy e receba os melhores cupons do Mercado Livre direto no WhatsApp, todos os dias.">
+<meta name="theme-color" content="#071615">
+
+<!-- TODO (domínio): adicionar canonical quando a URL pública definitiva estiver disponível -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Galpão da Evy | Quem tá no Galpão, paga menos">
+<meta property="og:description" content="Cupom e oferta do Mercado Livre, todo dia, sem spam. Entre grátis no grupo.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Galpão da Evy">
+<!-- TODO (domínio): adicionar og:url, og:image e twitter:image após a publicação -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Galpão da Evy | Quem tá no Galpão, paga menos">
+<meta name="twitter:description" content="Cupom e oferta do Mercado Livre, todo dia, sem spam. Entre grátis no grupo.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Galpão da Evy",
+  "description": "Grupo gratuito de cupons e ofertas do Mercado Livre no WhatsApp."
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
+
+<!-- TODO (GA4): inserir o snippet oficial com o ID de mensuração -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1085437827348953');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1085437827348953&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  :root {
+    --bg: #071615;
+    --bg2: #0B211F;
+    --teal: #005A57;
+    --orange: #FF612F;
+    --white: #F7F7F4;
+    --gray: #9BA7A5;
+    --yellow: #FFD700;
+    --purple1: #3D348B;
+    --purple2: #7678ED;
+    --gold: #F7B801;
+    --orange1: #F18701;
+    --orange2: #F35B04;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, .brand-name {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  .page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px 20px 64px;
+    overflow: hidden;
+  }
+
+  /* Foto de fundo da Evy */
+  .page-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(0,90,87,0.35), transparent 60%),
+      var(--bg);
+    background-image: url('assets/images/evy/evy-bg.png');
+    background-size: cover;
+    background-position: 62% 12%;
+    filter: brightness(0.5) saturate(0.85);
+    z-index: 0;
+  }
+
+  .page-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(7,22,21,0.65) 0%, rgba(7,22,21,0.85) 55%, var(--bg) 100%);
+  }
+
+  .card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .brand-mark {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  .brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--gray);
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #33D17A;
+    box-shadow: 0 0 0 rgba(51,209,122,0.6);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(51,209,122,0.55); }
+    70%  { box-shadow: 0 0 0 9px rgba(51,209,122,0); }
+    100% { box-shadow: 0 0 0 0 rgba(51,209,122,0); }
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 4px 0 0;
+    font-weight: 700;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+  }
+
+  .subhead {
+    font-size: 16px;
+    color: var(--white);
+    margin: 0;
+    max-width: 340px;
+    line-height: 1.5;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  }
+
+  .proof-note {
+    font-size: 13px;
+    color: var(--gray);
+    margin: -12px 0 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+
+  .cta-btn {
+    width: 100%;
+    background: linear-gradient(90deg, var(--purple1), var(--purple2), var(--gold), var(--orange1), var(--orange2));
+    color: var(--white);
+    font-weight: 600;
+    font-size: 17px;
+    padding: 17px 20px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(243,91,4,0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 34px rgba(243,91,4,0.5);
+  }
+
+  .cta-btn iconify-icon {
+    font-size: 22px;
+  }
+
+  .reassurance {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: -6px;
+  }
+
+  .reassurance span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .reassurance iconify-icon {
+    color: var(--gold);
+    font-size: 15px;
+  }
+
+  .info-box {
+    width: 100%;
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 20px 22px;
+    text-align: left;
+  }
+
+  .info-box h2 {
+    font-size: 16px;
+    margin: 0 0 6px;
+    font-weight: 600;
+  }
+
+  .info-box p {
+    font-size: 14px;
+    color: var(--gray);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  .divider-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--gray);
+    font-size: 13px;
+  }
+
+  .divider-row::before,
+  .divider-row::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .partners-row {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .partner-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .partner-icon.ml {
+    color: #2D3277;
+    background: #FFE600;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+  }
+  .partner-icon.shopee { color: #EE4D2D; background: #FFFFFF; }
+  .partner-icon.amazon { color: #FF9900; background: #131A22; }
+
+  .social-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .social-row a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--white);
+    transition: background 0.15s ease;
+  }
+
+  .social-row a:hover {
+    background: rgba(255,255,255,0.12);
+  }
+
+  .final-note {
+    font-size: 12px;
+    color: var(--gray);
+    opacity: 0.8;
+    margin-top: 6px;
+  }
+
+  @media (max-width: 380px) {
+    h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var groupLink = 'https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3';
+  var channelLink = 'https://whatsapp.com/channel/0029Vb8rcXqEQIahhY1zw32d';
+
+  document.querySelectorAll('a[href]').forEach(function (link) {
+    if (link.href.indexOf(groupLink) !== -1) {
+      link.addEventListener('click', function () {
+        fbq('trackCustom', 'click_whatsapp_group');
+      });
+    }
+    if (link.href.indexOf(channelLink) !== -1) {
+      link.addEventListener('click', function () {
+        fbq('trackCustom', 'click_whatsapp_channel');
+      });
+    }
+  });
+});
+</script>
+
+<div class="page">
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <div class="card">
+    <div class="brand-mark">
+      <img src="assets/images/brand/logo.png" alt="Galpão da Evy">
+    </div>
+
+    <div class="status-badge">
+      <span class="status-dot" aria-hidden="true"></span>
+      Grupo ativo agora
+    </div>
+    <p class="proof-note">+5 mil pessoas já fizeram parte</p>
+
+    <h1>Quem tá no Galpão, paga menos.</h1>
+    <p class="subhead">Cupom e oferta do Mercado Livre, todo dia, direto no seu WhatsApp.</p>
+
+    <a href="https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3" data-track="click_whatsapp_group" target="_blank" rel="noopener noreferrer" class="cta-btn">
+      <iconify-icon icon="ic:baseline-whatsapp" aria-hidden="true"></iconify-icon>
+      Entrar no grupo do WhatsApp
+    </a>
+
+    <div class="reassurance">
+      <span><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> 100% grátis</span>
+      <span><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> Sem spam</span>
+      <span><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> Saia quando quiser</span>
+    </div>
+
+    <div class="info-box">
+      <h2>Você também adora economizar?</h2>
+      <p>Garimpamos os melhores cupons e ofertas do Mercado Livre e compartilhamos com você, todos os dias.</p>
+    </div>
+
+    <div class="divider-row">Parceiros de oferta</div>
+
+    <div class="partners-row" aria-label="Lojas parceiras">
+      <span class="partner-icon ml" title="Mercado Livre">ML</span>
+      <span class="partner-icon shopee" title="Shopee"><iconify-icon icon="simple-icons:shopee" aria-hidden="true"></iconify-icon></span>
+      <span class="partner-icon amazon" title="Amazon"><iconify-icon icon="simple-icons:amazon" aria-hidden="true"></iconify-icon></span>
+    </div>
+
+    <div class="social-row" aria-label="Redes sociais do Galpão da Evy">
+      <a href="https://www.instagram.com/galpaodaevy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><iconify-icon icon="mdi:instagram" aria-hidden="true"></iconify-icon></a>
+      <a href="https://www.threads.net/@galpaodaevy" target="_blank" rel="noopener noreferrer" aria-label="Threads"><iconify-icon icon="simple-icons:threads" aria-hidden="true"></iconify-icon></a>
+      <a href="https://www.tiktok.com/@galpaodaevy" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><iconify-icon icon="ic:baseline-tiktok" aria-hidden="true"></iconify-icon></a>
+      <a href="https://www.youtube.com/@galpaodaevy" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><iconify-icon icon="mdi:youtube" aria-hidden="true"></iconify-icon></a>
+    </div>
+
+    <p class="final-note">© 2026 Galpão da Evy. Todos os direitos reservados.</p>
+  </div>
+</div>
+
+</body>
+</html>
