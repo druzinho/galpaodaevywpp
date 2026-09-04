@@ -301,12 +301,14 @@ src="https://www.facebook.com/tr?id=1085437827348953&ev=PageView&noscript=1"
   }
 
   .partner-icon.ml {
-    color: #2D3277;
     background: #FFE600;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: -0.5px;
+    overflow: hidden;
+    padding: 8px;
+  }
+  .partner-icon.ml img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   .partner-icon.shopee { color: #EE4D2D; background: #FFFFFF; }
   .partner-icon.amazon { color: #FF9900; background: #131A22; }
@@ -405,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="divider-row">Parceiros de oferta</div>
 
     <div class="partners-row" aria-label="Lojas parceiras">
-      <span class="partner-icon ml" title="Mercado Livre">ML</span>
+      <span class="partner-icon ml" title="Mercado Livre"><img src="assets/images/partners/mercado-livre.png" alt="Mercado Livre"></span>
       <span class="partner-icon shopee" title="Shopee"><iconify-icon icon="simple-icons:shopee" aria-hidden="true"></iconify-icon></span>
       <span class="partner-icon amazon" title="Amazon"><iconify-icon icon="simple-icons:amazon" aria-hidden="true"></iconify-icon></span>
     </div>
