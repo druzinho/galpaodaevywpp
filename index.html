@@ -410,6 +410,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var groupLink = 'https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3';
   var channelLink = 'https://whatsapp.com/channel/0029Vb8rcXqEQIahhY1zw32d';
   var productLink = 'https://meli.la/1kE2wQu';
+  var productLink2 = 'https://meli.la/18reQj1';
 
   document.querySelectorAll('a[href]').forEach(function (link) {
     if (link.href.indexOf(groupLink) !== -1) {
@@ -425,6 +426,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (link.href.indexOf(productLink) !== -1) {
       link.addEventListener('click', function () {
         fbq('trackCustom', 'click_product');
+      });
+    }
+    if (link.href.indexOf(productLink2) !== -1) {
+      link.addEventListener('click', function () {
+        fbq('trackCustom', 'click_product_2');
       });
     }
   });
@@ -464,6 +470,15 @@ document.addEventListener('DOMContentLoaded', function () {
       <span class="product-card-text">
         <span class="product-card-tag">Oferta de hoje no grupo</span>
         <span class="product-card-name">Bebedouro Bbe12p Aquaplus Para 10l Ou 20l Britânia Cor Preto</span>
+      </span>
+      <iconify-icon icon="lucide:chevron-right" aria-hidden="true"></iconify-icon>
+    </a>
+
+    <a href="https://meli.la/18reQj1" data-track="click_product_2" target="_blank" rel="noopener noreferrer" class="product-card">
+      <img src="assets/images/products/galaxy-buds-core.png" alt="Samsung Galaxy Buds Core">
+      <span class="product-card-text">
+        <span class="product-card-tag">Oferta de hoje no grupo</span>
+        <span class="product-card-name">Samsung Galaxy Buds Core</span>
       </span>
       <iconify-icon icon="lucide:chevron-right" aria-hidden="true"></iconify-icon>
     </a>
