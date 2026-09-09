@@ -1,25 +1,23 @@
 # Galpão da Evy
 
-Landing page estática em `index.html`, sem etapa de build.
+Landing page estática em index.html, sem build nem dependências novas.
 
-## Campanha de iPhones
-Ordem editorial: iPhone 17 256 GB, iPhone 15 128 GB, iPhone 16 128 GB, iPhone 16e 128 GB e iPhone 17 Pro Max 256 GB. Não representa ranking de vendas.
+## Mais vendidos
+Lista compacta limitada a cinco modelos, abaixo do CTA principal do WhatsApp. Título solicitado pelo responsável; não representa ranking de vendas verificado independentemente. Ordem editorial preservada, sem ordenar por preços desconhecidos.
 
-### Ativar os links de afiliado
-No objeto `affiliateLinks` de `index.html`, substitua o `null` de cada modelo pelo respectivo link HTTPS final. Confira modelo, capacidade, vendedor e atribuição de afiliado antes de preencher.
-Enquanto estiver nulo ou inválido, o card mantém “Oferta em preparação” e “Acompanhar no grupo”. Nunca reutilize os links dos outros produtos ou links de busca como se fossem ofertas de iPhone.
+| Modelo | Link fornecido |
+| --- | --- |
+| iPhone 17 256 GB | https://meli.la/2d5jvrk |
+| iPhone 15 128 GB | https://meli.la/2pPsJHR |
+| iPhone 16 128 GB | https://meli.la/2eZajaL |
+| iPhone 16e 128 GB | https://meli.la/1R7hgGX |
+| iPhone 17 Pro Max 256 GB Azul-profundo | https://meli.la/17GbT5L |
 
-Hosts aceitos: meli.la, mercadolivre.com.br, www.mercadolivre.com.br e produto.mercadolivre.com.br.
-Com um link válido, o card passa a mostrar “Ver oferta no Mercado Livre”, com rel sponsored e evento click_iphone_product contendo o modelo.
-Sem JavaScript, os cards continuam encaminhando ao grupo.
+Links diretos no HTML funcionam sem JavaScript, com rel sponsored noopener noreferrer. Para trocar uma oferta, editar href e identificação do modelo no respectivo elemento data-iphone. Rastreamento click_iphone_product envia o modelo ao Meta Pixel quando disponível.
 
-### Links anteriores
-- Bebedouro Britânia: https://meli.la/1kE2wQu — preservado na seção secundária.
-- Samsung Galaxy Buds Core: https://meli.la/18reQj1 — preservado na seção secundária.
-- Grupo e redes sociais: destinos originais preservados.
+O link do iPhone 17 foi associado pela resposta do responsável à solicitação do link faltante. Destinos encurtados, estoque e preços não foram confirmados por consulta automatizada. Não são exibidos preços, descontos ou datas de lançamento. Miniaturas usam um ícone genérico de celular, sem simular fotos dos produtos.
 
-A consulta automatizada dos dois links encurtados não conseguiu resolver os destinos. Produto, estoque, preço e validade não foram confirmados. Por isso, não são exibidos preços, descontos ou urgência; conferir os anúncios manualmente antes de promover essas ofertas.
+Modelos extras enviados ficaram fora da lista para manter o limite de cinco. Arquivos oficiais da logo e da Evy, grupo, redes sociais e os dois produtos anteriores foram preservados. Os links anteriores https://meli.la/1kE2wQu e https://meli.la/18reQj1 continuam na seção secundária; sua disponibilidade não foi confirmada.
 
-### Identidade e manutenção
-Arquivos oficiais da logo e da Evy preservados. Não há imagens simuladas dos iPhones. Nenhuma dependência nova.
-A página mantém o Meta Pixel e os eventos anteriores do grupo e dos dois produtos.
+## Validação
+Chrome em 320, 390, 768 e 1440 px: sem overflow horizontal, cinco links de compra presentes, ordem dos modelos correta, imagens locais carregadas e nenhum erro de JavaScript. Inspeção visual móvel. Recursos externos bloqueados no teste: fontes, Iconify e entrega de eventos do Meta Pixel não foram validados.
