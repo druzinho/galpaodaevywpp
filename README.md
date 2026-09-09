@@ -27,6 +27,8 @@ iPhone 15 não repetido. Um único anúncio do Pro Max foi escolhido para evitar
 ## Manutenção
 Links diretamente no HTML funcionam sem JavaScript, com rel sponsored noopener noreferrer. Editar href e identificação no elemento data-iphone ao trocar uma oferta. Evento click_iphone_product envia o modelo ao Meta Pixel quando disponível. CTA original do WhatsApp preservado.
 
-Nomes, capacidades e links conforme fornecidos pelo responsável. Destinos encurtados, disponibilidade, especificações e preços não foram confirmados automaticamente. Não há fotos inventadas, preços, descontos ou datas de lançamento: miniaturas usam ícone genérico de celular.
+Nomes, capacidades e links conforme fornecidos pelo responsável. Os dez links foram consultados e as fotos extraídas dos metadados dos próprios anúncios. Imagens WebP servidas pelo CDN do Mercado Livre, com loading lazy, dimensões reservadas e object-fit contain. Disponibilidade e preços continuam sem divulgação na página; não há descontos ou datas de lançamento inventados.
 
 Nenhuma dependência nova. Validação local em Chrome com recursos externos bloqueados; fontes, Iconify e entrega do Meta Pixel não cobertos por essa validação.
+
+Fotos e layout validados no Chrome em 320, 390, 768 e 1440 px: dez imagens carregadas, dez links presentes, ordem correta e sem overflow horizontal. Inspeção visual móvel concluída.
