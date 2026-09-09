@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Galpão da Evy | Quem tá no Galpão, paga menos</title>
-<meta name="description" content="Entre grátis no grupo do Galpão da Evy e receba os melhores cupons do Mercado Livre direto no WhatsApp, todos os dias.">
+<title>Galpão da Evy | Seleção de iPhones</title>
+<meta name="description" content="Explore a seleção de iPhones do Galpão da Evy e acompanhe cupons e ofertas do Mercado Livre no WhatsApp.">
 <meta name="theme-color" content="#071615">
 
 <!-- TODO (domínio): adicionar canonical quando a URL pública definitiva estiver disponível -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Galpão da Evy | Quem tá no Galpão, paga menos">
-<meta property="og:description" content="Cupom e oferta do Mercado Livre, todo dia, sem spam. Entre grátis no grupo.">
+<meta property="og:title" content="Galpão da Evy | Seleção de iPhones">
+<meta property="og:description" content="Pensando em trocar de iPhone? Conheça a seleção da Evy e acompanhe as ofertas no WhatsApp.">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Galpão da Evy">
 <!-- TODO (domínio): adicionar og:url, og:image e twitter:image após a publicação -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Galpão da Evy | Quem tá no Galpão, paga menos">
-<meta name="twitter:description" content="Cupom e oferta do Mercado Livre, todo dia, sem spam. Entre grátis no grupo.">
+<meta name="twitter:title" content="Galpão da Evy | Seleção de iPhones">
+<meta name="twitter:description" content="Pensando em trocar de iPhone? Conheça a seleção da Evy e acompanhe as ofertas no WhatsApp.">
 
 <script type="application/ld+json">
 {
@@ -98,7 +98,8 @@ src="https://www.facebook.com/tr?id=1085437827348953&ev=PageView&noscript=1"
   /* Foto de fundo da Evy */
   .page-bg {
     position: absolute;
-    inset: 0;
+    inset: 0 0 auto;
+    height: min(900px, 100vh);
     background:
       radial-gradient(circle at 50% 0%, rgba(0,90,87,0.35), transparent 60%),
       var(--bg);
@@ -401,43 +402,85 @@ src="https://www.facebook.com/tr?id=1085437827348953&ev=PageView&noscript=1"
   @media (max-width: 380px) {
     h1 { font-size: 26px; }
   }
+
+  .card { max-width: 880px; }
+  .subhead { max-width: 520px; }
+  .cta-btn { max-width: 440px; }
+  .brand-mark { width: 104px; height: 104px; }
+  a:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
+  .iphone-section { width: 100%; margin: 12px 0; }
+  .eyebrow { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .12em; }
+  .iphone-section h2 { margin: 8px 0 12px; font-size: 26px; }
+  .section-note { color: var(--gray); font-size: 13px; line-height: 1.6; max-width: 600px; margin: 12px auto; }
+  .iphone-grid { list-style: none; padding: 0; margin: 24px 0 16px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; text-align: left; }
+  .iphone-card { grid-column: span 2; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; padding: 22px; border: 1px solid #294440; border-radius: 16px; background: var(--bg2); }
+  .iphone-card:nth-child(-n+2) { grid-column: span 3; }
+  .iphone-card[data-featured] { border-color: var(--gold); background: linear-gradient(135deg, #193d36, var(--bg2)); }
+  .model-number { color: var(--gold); font-family: 'Space Grotesk', sans-serif; font-size: 24px; margin-bottom: 24px; }
+  .iphone-card h3 { font-size: 20px; margin: 0; }
+  .model-storage { color: var(--gray); margin: 6px 0 18px; font-size: 14px; }
+  .model-status { color: var(--gray); font-size: 12px; margin: auto 0 12px; }
+  .model-link { display: flex; justify-content: space-between; gap: 8px; width: 100%; align-items: center; min-height: 44px; border-top: 1px solid #294440; padding-top: 12px; font-size: 14px; font-weight: 600; }
+  .model-link:hover { color: var(--gold); }
+  .social-row a { width: 44px; height: 44px; }
+  @media (max-width: 600px) {
+    .page { padding: 28px 20px 40px; }
+    .iphone-grid { grid-template-columns: 1fr; }
+    .iphone-card, .iphone-card:nth-child(-n+2) { grid-column: auto; }
+    .iphone-card { padding: 20px; }
+    .model-number { margin-bottom: 12px; }
+    .iphone-section h2 { font-size: 23px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .status-dot { animation: none; }
+    .cta-btn, .product-card, .social-row a { transition: none; }
+  }
 </style>
 </head>
 <body>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  var groupLink = 'https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3';
-  var channelLink = 'https://whatsapp.com/channel/0029Vb8rcXqEQIahhY1zw32d';
-  var productLink = 'https://meli.la/1kE2wQu';
-  var productLink2 = 'https://meli.la/18reQj1';
+  // TODO (afiliados): preencher somente com links finais conferidos para cada modelo.
+  // null mantém o CTA honesto para o WhatsApp, inclusive sem JavaScript.
+  var affiliateLinks = {
+    'iphone-17': null,
+    'iphone-15': null,
+    'iphone-16': null,
+    'iphone-16e': null,
+    'iphone-17-pro-max': null
+  };
 
-  document.querySelectorAll('a[href]').forEach(function (link) {
-    if (link.href.indexOf(groupLink) !== -1) {
-      link.addEventListener('click', function () {
-        fbq('trackCustom', 'click_whatsapp_group');
-      });
-    }
-    if (link.href.indexOf(channelLink) !== -1) {
-      link.addEventListener('click', function () {
-        fbq('trackCustom', 'click_whatsapp_channel');
-      });
-    }
-    if (link.href.indexOf(productLink) !== -1) {
-      link.addEventListener('click', function () {
-        fbq('trackCustom', 'click_product');
-      });
-    }
-    if (link.href.indexOf(productLink2) !== -1) {
-      link.addEventListener('click', function () {
-        fbq('trackCustom', 'click_product_2');
-      });
-    }
+  document.querySelectorAll('[data-iphone]').forEach(function (link) {
+    var url = affiliateLinks[link.dataset.iphone];
+    if (!url) return;
+    try {
+      var parsed = new URL(url);
+      if (parsed.protocol !== 'https:' ||
+          !['meli.la', 'mercadolivre.com.br', 'www.mercadolivre.com.br',
+            'produto.mercadolivre.com.br'].includes(parsed.hostname)) return;
+    } catch (error) { return; }
+    link.href = url;
+    link.rel = 'sponsored noopener noreferrer';
+    link.dataset.track = 'click_iphone_product';
+    link.textContent = 'Ver oferta no Mercado Livre ↗';
+    var card = link.closest('.iphone-card');
+    link.setAttribute('aria-label', 'Ver oferta de ' + card.querySelector('h3').textContent + ' no Mercado Livre');
+    card.querySelector('.model-status').textContent = 'Confira as condições no anúncio';
+  });
+
+  document.querySelectorAll('a[data-track]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (typeof window.fbq === 'function') {
+        window.fbq('trackCustom', link.dataset.track,
+          link.dataset.iphone ? {model: link.dataset.iphone} : {});
+      }
+    });
   });
 });
 </script>
 
-<div class="page">
+<main class="page">
   <div class="page-bg" aria-hidden="true"></div>
 
   <div class="card">
@@ -447,12 +490,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <div class="status-badge">
       <span class="status-dot" aria-hidden="true"></span>
-      Grupo ativo agora
+      Especial iPhones
     </div>
-    <p class="proof-note">+5 mil pessoas já fizeram parte</p>
+    <p class="proof-note">Galpão da Evy • Quem tá no Galpão, paga menos.</p>
 
-    <h1>Quem tá no Galpão, paga menos.</h1>
-    <p class="subhead">Cupom e oferta do Mercado Livre, todo dia, direto no seu WhatsApp.</p>
+    <h1>Nova geração no radar.<br>Seu próximo iPhone também.</h1>
+    <p class="subhead">Pensando em trocar de iPhone? Explore a seleção da Evy e acompanhe cupons e ofertas no WhatsApp.</p>
 
     <a href="https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3" data-track="click_whatsapp_group" target="_blank" rel="noopener noreferrer" class="cta-btn">
       <iconify-icon icon="ic:baseline-whatsapp" aria-hidden="true"></iconify-icon>
@@ -465,19 +508,59 @@ document.addEventListener('DOMContentLoaded', function () {
       <span><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> Saia quando quiser</span>
     </div>
 
-    <a href="https://meli.la/1kE2wQu" data-track="click_product" target="_blank" rel="noopener noreferrer" class="product-card">
-      <img src="assets/images/products/bebedouro-britania.png" alt="Bebedouro Bbe12p Aquaplus Para 10l Ou 20l Britânia Cor Preto">
+    <section class="iphone-section" aria-labelledby="iphones-title">
+      <p class="eyebrow">SELEÇÃO DA EVY</p>
+      <h2 id="iphones-title">Qual iPhone combina com você?</h2>
+      <p class="section-note">Cinco modelos para ficar de olho. Os links de compra serão disponibilizados após a conferência das ofertas.</p>
+      <ol class="iphone-grid">
+        <li class="iphone-card" data-featured="true">
+          <span class="model-number" aria-hidden="true">01</span>
+          <div><h3>iPhone 17</h3><p class="model-storage">256 GB</p></div>
+          <p class="model-status">Oferta em preparação</p>
+          <a data-iphone="iphone-17" data-track="click_whatsapp_group" href="https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3" target="_blank" rel="noopener noreferrer" class="model-link" aria-label="Acompanhar ofertas de iPhone 17 no grupo do WhatsApp">Acompanhar no grupo <span aria-hidden="true">↗</span></a>
+        </li>
+        <li class="iphone-card">
+          <span class="model-number" aria-hidden="true">02</span>
+          <div><h3>iPhone 15</h3><p class="model-storage">128 GB</p></div>
+          <p class="model-status">Oferta em preparação</p>
+          <a data-iphone="iphone-15" data-track="click_whatsapp_group" href="https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3" target="_blank" rel="noopener noreferrer" class="model-link" aria-label="Acompanhar ofertas de iPhone 15 no grupo do WhatsApp">Acompanhar no grupo <span aria-hidden="true">↗</span></a>
+        </li>
+        <li class="iphone-card">
+          <span class="model-number" aria-hidden="true">03</span>
+          <div><h3>iPhone 16</h3><p class="model-storage">128 GB</p></div>
+          <p class="model-status">Oferta em preparação</p>
+          <a data-iphone="iphone-16" data-track="click_whatsapp_group" href="https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3" target="_blank" rel="noopener noreferrer" class="model-link" aria-label="Acompanhar ofertas de iPhone 16 no grupo do WhatsApp">Acompanhar no grupo <span aria-hidden="true">↗</span></a>
+        </li>
+        <li class="iphone-card">
+          <span class="model-number" aria-hidden="true">04</span>
+          <div><h3>iPhone 16e</h3><p class="model-storage">128 GB</p></div>
+          <p class="model-status">Oferta em preparação</p>
+          <a data-iphone="iphone-16e" data-track="click_whatsapp_group" href="https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3" target="_blank" rel="noopener noreferrer" class="model-link" aria-label="Acompanhar ofertas de iPhone 16e no grupo do WhatsApp">Acompanhar no grupo <span aria-hidden="true">↗</span></a>
+        </li>
+        <li class="iphone-card">
+          <span class="model-number" aria-hidden="true">05</span>
+          <div><h3>iPhone 17 Pro Max</h3><p class="model-storage">256 GB</p></div>
+          <p class="model-status">Oferta em preparação</p>
+          <a data-iphone="iphone-17-pro-max" data-track="click_whatsapp_group" href="https://chat.whatsapp.com/Can6boHIPhv13Sr9jz7Vv3" target="_blank" rel="noopener noreferrer" class="model-link" aria-label="Acompanhar ofertas de iPhone 17 Pro Max no grupo do WhatsApp">Acompanhar no grupo <span aria-hidden="true">↗</span></a>
+        </li>
+      </ol>
+      <p class="section-note">Preços, estoque e condições devem ser conferidos no anúncio antes da compra.</p>
+    </section>
+
+    <div class="divider-row">Mais achados do Galpão</div>
+    <a href="https://meli.la/1kE2wQu" data-track="click_product" target="_blank" rel="sponsored noopener noreferrer" class="product-card">
+      <img loading="lazy" decoding="async" width="44" height="44" src="assets/images/products/bebedouro-britania.png" alt="Bebedouro Bbe12p Aquaplus Para 10l Ou 20l Britânia Cor Preto">
       <span class="product-card-text">
-        <span class="product-card-tag">Oferta de hoje no grupo</span>
+        <span class="product-card-tag">Confira as condições no anúncio</span>
         <span class="product-card-name">Bebedouro Bbe12p Aquaplus Para 10l Ou 20l Britânia Cor Preto</span>
       </span>
       <iconify-icon icon="lucide:chevron-right" aria-hidden="true"></iconify-icon>
     </a>
 
-    <a href="https://meli.la/18reQj1" data-track="click_product_2" target="_blank" rel="noopener noreferrer" class="product-card">
-      <img src="assets/images/products/galaxy-buds-core.png" alt="Samsung Galaxy Buds Core">
+    <a href="https://meli.la/18reQj1" data-track="click_product_2" target="_blank" rel="sponsored noopener noreferrer" class="product-card">
+      <img loading="lazy" decoding="async" width="44" height="44" src="assets/images/products/galaxy-buds-core.png" alt="Samsung Galaxy Buds Core">
       <span class="product-card-text">
-        <span class="product-card-tag">Oferta de hoje no grupo</span>
+        <span class="product-card-tag">Confira as condições no anúncio</span>
         <span class="product-card-name">Samsung Galaxy Buds Core</span>
       </span>
       <iconify-icon icon="lucide:chevron-right" aria-hidden="true"></iconify-icon>
@@ -488,9 +571,9 @@ document.addEventListener('DOMContentLoaded', function () {
       <p>Garimpamos os melhores cupons e ofertas do Mercado Livre e compartilhamos com você, todos os dias.</p>
     </div>
 
-    <div class="divider-row">Parceiros de oferta</div>
+    <div class="divider-row">Encontre ofertas nas lojas</div>
 
-    <div class="partners-row" aria-label="Lojas parceiras">
+    <div class="partners-row" aria-label="Lojas">
       <span class="partner-icon ml" title="Mercado Livre"><img src="assets/images/partners/mercado-livre.png" alt="Mercado Livre"></span>
       <span class="partner-icon shopee" title="Shopee"><iconify-icon icon="simple-icons:shopee" aria-hidden="true"></iconify-icon></span>
       <span class="partner-icon amazon" title="Amazon"><iconify-icon icon="simple-icons:amazon" aria-hidden="true"></iconify-icon></span>
@@ -503,9 +586,10 @@ document.addEventListener('DOMContentLoaded', function () {
       <a href="https://www.youtube.com/@galpaodaevy" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><iconify-icon icon="mdi:youtube" aria-hidden="true"></iconify-icon></a>
     </div>
 
+    <p class="section-note">Podemos receber comissão por compras realizadas pelos nossos links de afiliado.</p>
     <p class="final-note">© 2026 Galpão da Evy. Todos os direitos reservados.</p>
   </div>
-</div>
+</main>
 
 </body>
 </html>
